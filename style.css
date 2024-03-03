@@ -1,0 +1,310 @@
+body {
+    background: #ffffff;
+}
+.v-stack {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колонки в сетке */
+    grid-column-gap: 10px; /* Уменьшить промежуток между колонками */
+    margin-top: 20px;
+    font-size: 15px;
+    white-space: nowrap; /* Запретить перенос текста */
+    text-align: right; /* Выравнивание текста по правому краю */
+    padding-right: 20px; /* Добавить небольшой отступ справа */
+}
+.income{
+    font-size: 20px;
+    color: #05a805;
+}
+.expenses{
+    font-size: 20px;
+    color: #ef0b2e;
+}
+.period-balance{
+    font-size: 20px;
+    color: #05a805;
+}
+.current-balance{
+    font-size: 20px;
+    color: #05a805;
+}
+
+
+.v-stack::after,
+.v-stack::before{
+    content: "";
+    position: absolute;
+    top:82px; /* Начало линии будет сверху блока v-stack */
+    left: 50%; /* Линия будет посередине между двумя столбцами */
+    height:6%; /* Высота линии будет равна высоте блока v-stack */
+    width: 1px; /* Толщина линии */
+    background-color: #eae7e7; /* Цвет линии */
+    transform: translateX(-50%); /* Центрирование линии относительно столбцов */
+    z-index: -1; /* Поместить линию за содержимым блока */
+}
+.v-stack::after {
+    margin-top: 58px; /* Расположение второй линии */
+    height:6%;
+}
+
+
+.divider{
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Добавлено для позиционирования псевдоэлемента */
+}
+
+.h-stack{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-top: 50px;
+
+}
+.h-stack span {
+    margin: 0 25px; /* Измените значение по вашему усмотрению */
+    cursor: pointer; /* Сделать span кликабельными */
+    white-space: nowrap; /* Запретить перенос текста */
+
+}
+
+.h-stack span:hover {
+    text-decoration: underline; /* Добавить подчеркивание при наведении */
+}
+.h-stack span:not(:last-child)::after {
+    content: '\00B7'; /* Указание кода для точки */
+    position: absolute;
+    right: -25px; /* Регулируйте этот отступ по вашему усмотрению */
+    color: #858383; /* Цвет точки */
+}
+.divider::after {
+    content: "";
+    position: absolute;
+    left: 0; /* Начало линии будет с левого края блока v-stack */
+    bottom: -10px; /* Отступ от блока h-stack */
+    width: 100%; /* Ширина линии будет равна ширине блока h-stack */
+    border-bottom: 1px solid #e0dcdc; /* Цвет и толщина линии */
+}
+
+.v-stack-one{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    white-space: nowrap; /* Запретить перенос текста */
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 250px;
+    margin-top: 20px;
+    text-align: right; /* Выравнивание по правому краю */
+    margin-left: 10px;
+
+}
+
+.v-stack-two{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    white-space: nowrap; /* Запретить перенос текста */
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 250px;
+    margin-top: 20px;
+    text-align: right; /* Выравнивание по правому краю */
+    margin-left: 6px;
+    color: #858383;
+
+}
+.v-stack-thee{
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+    white-space: nowrap; /* Запретить перенос текста */
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 250px;
+    margin-top: 2px;
+
+}
+.v-stack-for{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    white-space: nowrap; /* Запретить перенос текста */
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 250px;
+    margin-top: 20px;
+    text-align: right; /* Выравнивание по правому краю */
+    margin-left: 6px;
+    color: #858383;
+
+}
+.v-stack-five{
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+    white-space: nowrap; /* Запретить перенос текста */
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 250px;
+    margin-top: 2px;
+}
+.v-stack-six{
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+    white-space: nowrap; /* Запретить перенос текста */
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 250px;
+    margin-top: 2px;
+
+}
+.v-stack-seven{
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+    white-space: nowrap; /* Запретить перенос текста */
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 250px;
+    margin-top: 2px;
+
+}
+
+.h-stack-one{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-top: 8px;
+    color: #858383;
+}
+.h-stack-two{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-top: 8px;
+
+
+}
+.h-stack-thee{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-top: 8px;
+
+}
+.h-stack-for{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-top: 8px;
+}
+.h-stack-five{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-top: 8px;
+}
+
+.h-stack-six{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-top: 8px;
+
+}
+.h-stack-seven{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-top: 8px;
+}
+
+
+
+.v-stack-thee ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы вокруг списка */
+    margin-left: 40px; /* Отступ от левого края */
+}
+.v-stack-five ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы вокруг списка */
+    margin-left: 40px; /* Отступ от левого края */
+}
+.v-stack-six ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы вокруг списка */
+    margin-left: 40px; /* Отступ от левого края */
+}
+.v-stack-seven ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы вокруг списка */
+    margin-left: 40px; /* Отступ от левого края */
+}
+
+.v-stack-five ul li {
+    margin-left: 30px; /* Отступ от левого края */
+    font-size: 13px;
+}
+.v-stack-six ul li {
+    margin-left: 30px; /* Отступ от левого края */
+    font-size: 13px;
+}
+.v-stack-seven ul li {
+    margin-left: 30px; /* Отступ от левого края */
+    font-size: 13px;
+}
+.v-stack-thee ul li {
+    margin-left: 30px; /* Отступ от левого края */
+    font-size: 13px;
+}
+.divider-two::after {
+    content: "";
+    position: absolute;
+    left: 70px; /* Начало линии будет с левого края блока v-stack */
+    bottom: 3px; /* Отступ от блока h-stack */
+    width: 84%; /* Ширина линии будет равна ширине блока h-stack */
+    border-bottom: 1px solid #e0dcdc; /* Цвет и толщина линии */
+}
+.divider-two {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.item {
+    margin-top: 15px;
+color: #ef0b2e;
+
+}
+.item-for{
+color: #05a805;
+    margin-top: 15px;
+}
+
+.
+
+/* Медиа-запросы для адаптации к мобильным устройствам */
+@media only screen and (min-width: 600px) {
+    /* Применяем стили для экранов шире 600px */
+    .v-stack {
+        grid-column-gap: 250px;
+    }
+
+    .v-stack-one, .v-stack-two, .v-stack-thee, .v-stack-for, .v-stack-five, .v-stack-six, .v-stack-seven {
+        display: flex;
+    }
+
+    .v-stack-thee, .v-stack-five, .v-stack-six, .v-stack-seven {
+        font-size: 19px;
+    }
+
+    .h-stack {
+        font-size: 10px;
+    }
+
+    .divider-two {
+        display: flex;
+    }
+}
